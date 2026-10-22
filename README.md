@@ -3,9 +3,9 @@
 I am a Computer Science student specializing in Offensive Security (Web & Mobile Pentesting). 
 
 ###  Current Focus
-- 🛡️ **Web Exploitation:** Grinding through PortSwigger Academy (SQLi, XSS, CSRF).
-- 🐧 **Linux:** Mastering the terminal via OverTheWire Bandit.
-- 🐍 **Python:** Building custom security automation scripts.
+-  **Web Exploitation:** Grinding through PortSwigger Academy (SQLi, XSS, CSRF).
+-  **Linux:** Mastering the terminal via OverTheWire Bandit.
+-  **Python:** Building custom security automation scripts.
 
 ###  My Progress Tracker
 - **PortSwigger Labs Completed:** 0/50
