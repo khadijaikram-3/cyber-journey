@@ -18,5 +18,5 @@ I am a Computer Science student specializing in Offensive Security (Web & Mobile
 - [CTF Write-ups](link-to-repo-4) - Walkthroughs of CTF challenges.
 
 ### Connect with me
-- [LinkedIn](linkedin.com/in/khadija-ikram-cs)
-- [Medium]((https://medium.com/@mkhadijaikram333))
+- linkedin.com/in/khadija-ikram-cs
+- [Medium](https://medium.com/@mkhadijaikram333)
