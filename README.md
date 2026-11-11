@@ -13,7 +13,7 @@ I am a Computer Science student specializing in Offensive Security (Web & Mobile
 - **Python Tools Built:** 0
 
 ###  My Repositories
-- [PortSwigger Notes](link-to-repo-2) - Payloads and notes from my labs.
+- [PortSwigger Notes](https://github.com/khadijaikram-3/portswigger-notes) - Payloads and notes from my labs.
 - [Python Security Tools](link-to-repo-3) - Scripts I have built.
 - [CTF Write-ups](link-to-repo-4) - Walkthroughs of CTF challenges.
 
