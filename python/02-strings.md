@@ -1,4 +1,4 @@
-# Python Strings (Day 2)
+# Python Strings - Day 2
 
 ## 1. Basics of Strings
 - Created using single (`' '`) or double (`" "`) quotes.
