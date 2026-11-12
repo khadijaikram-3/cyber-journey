@@ -164,6 +164,4 @@ r-- = Group can Read.
 
 **Important Mistake to Avoid:** Do not try to cat the permissions column (-rw-r-----). Always cat the filename column (...Hiding-From-You).
 
-text
-
 
