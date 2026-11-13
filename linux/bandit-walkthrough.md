@@ -23,4 +23,7 @@
 
 ## Level 4 → Level 5
 **Goal:** Password is in the only human-readable file in the `inhere` directory.
-- **Action:** *(Write your own notes here after you solve it!)*
+- **Action:** Used `cd inhere`, then `ls`. Found files `-file00` to `-file09`. Used `cat -- "-file07"` to find the ASCII text file.
+- **Password:** `6C7h9GD8M6ai5nr7wo1RonrzFjj9yIrG`
+
+
