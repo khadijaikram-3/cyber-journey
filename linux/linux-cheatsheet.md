@@ -164,4 +164,18 @@ r-- = Group can Read.
 
 **Important Mistake to Avoid:** Do not try to cat the permissions column (-rw-r-----). Always cat the filename column (...Hiding-From-You).
 
+## 🚨 Reading Multiple Files (Wildcards)
+
+When you are in a directory with many files and you want to read them all at once, you use the **Wildcard** symbol (`*`), which means "everything".
+
+### Method 1: The Wildcard (`*`)
+- **Syntax:** `cat ./*`
+- **What it does:** Reads every single file in the current directory and prints it to the screen.
+- **Why use it:** It's a fast way to dump all the contents of a folder, but be careful—if there are binary files or images in the folder, it will flood your terminal with weird symbols and garbage text.
+
+### Method 2: The `file` Command (The Smart Way)
+- **Syntax:** `file ./*`
+- **What it does:** It checks every file in the directory and tells you what type of file it is (e.g., ASCII text, data, image, ELF executable).
+- **Why use it:** If you have 50 files and you are looking for the only human-readable text file (like in Bandit Level 4), `cat ./*` will give you a headache. Instead, run `file ./*` first. It will clearly list which file says "ASCII text", and then you can just `cat` that specific file.
+
 
