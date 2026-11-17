@@ -18,6 +18,11 @@ A detailed reference guide for essential Linux commands, including syntax, purpo
 - **Example:** `ls -la` 
 - **Why use it:** `ls -la` shows hidden files (starting with a dot `.`) and gives details like permissions, owner, and file size.
 
+### `ls -lh` (List Human-Readable)
+- **Purpose:** Lists files with their sizes in a human-readable format (K, M, G).
+- **Example:** `ls -lh` -> Shows `-file2` is `2.5K` and `.file2` is `1033` (bytes).
+- **Why use it:** Great for finding files of a specific size or checking if a file is too large to `cat`.
+
 ### `cd` (Change Directory)
 - **Purpose:** Moves you from one directory to another.
 - **Syntax:** `cd [directory_path]`
@@ -68,6 +73,15 @@ If a file has spaces, starts with a dash, or looks weird, you have 4 ways to rea
 - **Syntax:** `find [starting_directory] -name "[filename]"`
 - **Example:** `find / -name "flag.txt" 2>/dev/null`
 - **Why use it:** To locate a file when you don't know where it is. *(Note: `2>/dev/null` hides the "Permission Denied" errors).*
+
+### `find` (Advanced Search)
+- **Purpose:** Searches for files and directories based on specific criteria (name, size, permissions).
+- **Syntax:** `find [location] [options]`
+- **Common Filters:**
+  - `-type f`: Only look for files.
+  - `-size 1033c`: Exactly 1033 bytes (`c` = bytes).
+  - `! -executable`: Not executable.
+- **Example:** `find . -type f -size 1033c ! -executable` (Search current directory for a 1033-byte, non-executable file).
 
 ### `grep` (Global Regular Expression Print)
 - **Purpose:** Searches for a specific word or pattern inside a file.
