@@ -26,4 +26,8 @@
 - **Action:** Used `cd inhere`, then `ls`. Found files `-file00` to `-file09`. Used `cat -- "-file07"` to find the ASCII text file.
 - **Password:** `6C7h9GD8M6ai5nr7wo1RonrzFjj9yIrG`
 
-
+## Level 5 → Level 6
+**Goal:** Password is in a file under `inhere` that is human-readable, 1033 bytes, and not executable.
+- **Action:** Used `find . -type f -size 1033c ! -executable` to filter all files in all subdirectories. 
+- **Mistake to avoid:** I accidentally read `-file2` (a decoy with a dash) instead of `.file2` (the hidden file with a dot). The `find` command gave me the correct path, but I had to make sure I was in the right directory before running `cat`.
+- **Password:** `pXa26xhMWaC2SvDotA4r9EgZkulOeSBW`
