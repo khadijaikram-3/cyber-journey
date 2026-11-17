@@ -8,8 +8,8 @@ I am a Computer Science student specializing in Offensive Security (Web & Mobile
 -  **Python:** Building custom security automation scripts.
 
 ###  My Progress Tracker
-- **PortSwigger Labs Completed:** 3/50
-- **Bandit Levels Completed:** 5/33
+- **PortSwigger Labs Completed:** 4/50
+- **Bandit Levels Completed:** 6/33
 - **Python Tools Built:** 0
 
 ###  My Repositories
