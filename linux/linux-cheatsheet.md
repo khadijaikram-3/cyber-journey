@@ -17,6 +17,8 @@ A detailed reference guide for essential Linux commands, including syntax, purpo
 - **Syntax:** `ls [options] [directory]`
 - **Example:** `ls -la` 
 - **Why use it:** `ls -la` shows hidden files (starting with a dot `.`) and gives details like permissions, owner, and file size.
+- - **`ls -lt`**: Sort by modification time (newest first).
+- **`ls -lS`**: Sort by file size (largest first).
 
 ### `ls -lh` (List Human-Readable)
 - **Purpose:** Lists files with their sizes in a human-readable format (K, M, G).
@@ -28,6 +30,10 @@ A detailed reference guide for essential Linux commands, including syntax, purpo
 - **Syntax:** `cd [directory_path]`
 - **Example:** `cd /var/www/html` (moves to the web server folder) or `cd ..` (moves up one folder).
 - **Why use it:** To navigate the file system without a mouse.
+- - **`cd /folder`**: Go to a specific folder.
+- **`cd ..`**: Go up one level to the parent directory.
+- **`cd ~`**: Go to your home directory.
+- **`cd -`**: Go back to the previous directory you were in.
 
 ### `mkdir` (Make Directory)
 - **Purpose:** Creates a new folder.
@@ -43,7 +49,13 @@ A detailed reference guide for essential Linux commands, including syntax, purpo
 - **Purpose:** Reads a file and prints its entire contents to the screen.
 - **Syntax:** `cat [filename]`
 - **Example:** `cat /etc/passwd`
-- **Why use it:** Fastest way to read a short file (like a `readme` or a password file). 
+- **Why use it:** Fastest way to read a short file (like a `readme` or a password file).
+- Prints the entire contents of a file to the screen.
+- **`cat file.txt`**: Read a file.
+- **`cat "file with spaces.txt"`**: Read a file with spaces in its name.
+- **`cat ./-`**: Read a file named with a dash (the `./` tells Linux "look in this directory").
+- **`cat -- "-file"`**: The `--` tells Linux "stop looking for flags, this is a file."
+- **`cat file1 file2`**: Read multiple files at once.
 
   **🚨 Hacker Note: Handling weird filenames with `cat`**
 If a file has spaces, starts with a dash, or looks weird, you have 4 ways to read it:
@@ -82,12 +94,21 @@ If a file has spaces, starts with a dash, or looks weird, you have 4 ways to rea
   - `-size 1033c`: Exactly 1033 bytes (`c` = bytes).
   - `! -executable`: Not executable.
 - **Example:** `find . -type f -size 1033c ! -executable` (Search current directory for a 1033-byte, non-executable file).
+- - **`find . -name "filename"`**: Search for a file by name in the current directory.
+- **`find . -type f`**: Search for **files only** (not folders).
+- **`find . -size 1033c`**: Search for a file of exactly 1033 bytes (`c` = bytes).
+- **`find . -type f -size 1033c ! -executable`**: The Bandit Level 5 command. Finds files that are 1033 bytes and **not** executable.
+- **`find / -name "flag.txt" 2>/dev/null`**: Search the entire system for a file, while hiding all the "Permission Denied" errors
 
 ### `grep` (Global Regular Expression Print)
 - **Purpose:** Searches for a specific word or pattern inside a file.
 - **Syntax:** `grep "[word]" [filename]`
 - **Example:** `grep "password" /var/log/auth.log`
 - **Why use it:** When a file is massive, `grep` instantly finds the specific line you care about.
+- - **`grep "password" file.txt`**: Prints the lines containing the word "password".
+- **`grep -i "admin" file.txt`**: Ignores case (matches "Admin", "ADMIN", etc.).
+- **`grep -r "secret" /var/log/`**: Searches recursively through all files in a directory.
+- **`cat file.txt | grep "error"`**: Reads a file and filters for the word "error".
 
 ---
 
@@ -98,12 +119,14 @@ If a file has spaces, starts with a dash, or looks weird, you have 4 ways to rea
 - **Syntax:** `file [filename]`
 - **Example:** `file unknown_file`
 - **Why use it:** A hacker might find a file with no extension. `file` will tell you if it's an image, a text file, or a compiled binary.
+- - **`file ./*`**: Identifies every file in the current directory. *Use this to find the human-readable file among many binary files.*
 
 ### `du` (Disk Usage)
 - **Purpose:** Estimates the size of a file or directory.
 - **Syntax:** `du -h [filename]`
 - **Example:** `du -h backup.zip`
 - **Why use it:** `-h` means "human-readable" (shows KB, MB, GB instead of raw bytes).
+- **`du -b file`**: Shows the exact size of a file in bytes.
 
 ### `chmod` (Change Mode)
 - **Purpose:** Changes the permissions of a file (read, write, execute).
