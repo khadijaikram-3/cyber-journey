@@ -38,3 +38,8 @@
 - **File Found:** `/var/lib/dpkg/info/bandit7.password`
 - **Command to read:** `cat /var/lib/dpkg/info/bandit7.password`
 - **Password:** `Bmnnvf82KzQlfxgAI2d1zYbr1u9pr3E3`
+
+## Level 7 → Level 8
+**Goal:** Password is stored in `data.txt` next to the word `millionth`.
+- **Action:** Used `grep "millionth" data.txt` to filter the file and print only the line containing the target word.
+- **Password:** `VR1ljMayciFxbnUokuQmJFw6QC9VKtub`
