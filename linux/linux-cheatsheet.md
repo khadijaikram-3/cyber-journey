@@ -229,4 +229,25 @@ When you are in a directory with many files and you want to read them all at onc
 - **`-group groupname`**: Files owned by a specific group.
 - **`-size 33c`**: Files exactly 33 bytes (`c` = bytes).
 
+## Data Processing & Decoding Commands (From Bandit)
 
+### Searching & Filtering
+- **`grep "word" file`**: Finds lines containing a specific word.
+- **`sort file`**: Sorts lines alphabetically or numerically.
+- **`uniq -u`**: Removes adjacent duplicates. *(Always use `sort` before `uniq`!)*
+
+### Viewing & Extracting
+- **`strings file`**: Extracts human-readable text from a binary file.
+- **`xxd file`**: Creates a hex dump of a file (or `xxd -r` to reverse it).
+
+### Encoding & Decoding
+- **`base64 -d file`**: Decodes a Base64 encoded file.
+- **`tr 'a-z' 'A-Z'`**: Translates characters (e.g., lowercase to uppercase).
+
+### Archives & Compression
+- **`tar -xvf file.tar`**: Extracts a tar archive.
+- **`gzip -d file.gz`**: Decompresses a gzip file.
+- **`bzip2 -d file.bz2`**: Decompresses a bzip2 file.
+
+### The Manual
+- **`man command`**: Opens the manual page for any command.
