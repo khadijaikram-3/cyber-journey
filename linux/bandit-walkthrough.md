@@ -31,3 +31,10 @@
 - **Action:** Used `find . -type f -size 1033c ! -executable` to filter all files in all subdirectories. 
 - **Mistake to avoid:** I accidentally read `-file2` (a decoy with a dash) instead of `.file2` (the hidden file with a dot). The `find` command gave me the correct path, but I had to make sure I was in the right directory before running `cat`.
 - **Password:** `pXa26xhMWaC2SvDotA4r9EgZkulOeSBW`
+
+## Level 6 → Level 7
+**Goal:** Password is stored in a file somewhere on the server, owned by user `bandit7`, owned by group `bandit6`, and exactly 33 bytes in size.
+- **Action:** Used `find / -type f -user bandit7 -group bandit6 -size 33c 2>/dev/null` to search the entire filesystem while hiding permission errors.
+- **File Found:** `/var/lib/dpkg/info/bandit7.password`
+- **Command to read:** `cat /var/lib/dpkg/info/bandit7.password`
+- **Password:** `Bmnnvf82KzQlfxgAI2d1zYbr1u9pr3E3`
