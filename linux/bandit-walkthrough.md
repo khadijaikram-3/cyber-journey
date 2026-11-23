@@ -43,3 +43,8 @@
 **Goal:** Password is stored in `data.txt` next to the word `millionth`.
 - **Action:** Used `grep "millionth" data.txt` to filter the file and print only the line containing the target word.
 - **Password:** `VR1ljMayciFxbnUokuQmJFw6QC9VKtub`
+
+## Level 8 → Level 9
+**Goal:** Password is in `data.txt` and is the only line that occurs only once.
+- **Action:** Used `sort data.txt | uniq -u` to sort the lines and filter out duplicates, leaving only the unique line.
+- **Password:** `EjmOSvuAu7sGAHqHVcBDPirRe9T03kxl`
