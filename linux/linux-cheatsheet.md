@@ -251,3 +251,28 @@ When you are in a directory with many files and you want to read them all at onc
 
 ### The Manual
 - **`man command`**: Opens the manual page for any command.
+
+## Advanced Data Processing & CTF Commands
+
+### The Pipe (`|`)
+- **What it does:** Takes the output of the command on the left and feeds it as the input to the command on the right.
+- **Example:** `sort data.txt | uniq -u` (Sorts the file, then removes duplicates).
+
+### Searching & Filtering
+- **`grep -i "word" file`**: Searches for a word inside a file, ignoring case (uppercase/lowercase).
+- **`sort file`**: Sorts lines of text alphabetically or numerically.
+- **`uniq -u`**: Removes adjacent duplicate lines. *(Always use `sort` before `uniq`)*.
+
+### Viewing & Extracting
+- **`strings file | grep -i "flag"`**: Extracts human-readable text from a binary file and filters for the word "flag". *(Crucial for CTFs!)*
+- **`xxd file`**: Creates a hex dump of a file.
+- **`xxd -r hex.txt > original.txt`**: Reverses a hex dump back to binary.
+
+### Encoding & Decoding
+- **`base64 -d encoded.txt`**: Decodes a Base64 encoded file.
+- **`tr 'a-z' 'A-Z'`**: Translates characters (e.g., converts all lowercase to uppercase).
+
+### Archives & Compression
+- **`tar -xvf archive.tar`**: Extracts a tar archive.
+- **`gzip -d file.gz`**: Decompresses a gzip file.
+- **`bzip2 -d file.bz2`**: Decompresses a bzip2 file.
