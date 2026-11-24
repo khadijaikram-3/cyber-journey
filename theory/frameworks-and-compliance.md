@@ -55,5 +55,4 @@ A U.S.-based agency that develops voluntary compliance frameworks used worldwide
 - **Purpose:** Reports that focus on an organization's user access policies at different levels (Associate, Supervisor, Manager, Executive, Vendor) to assess financial compliance and risk levels.
 - **Covers:** Confidentiality, privacy, integrity, availability, security, and data safety.
 
-## 4. Pro Tip for Interviews
-Mention that you understand the difference between **Frameworks** (guidelines/plans) and **Controls** (specific safeguards). Also, be aware that regulations are frequently revised. Keep an eye on the Gramm-Leach-Bliley Act and the Sarbanes-Oxley Act for future study.
+
