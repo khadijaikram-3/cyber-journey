@@ -48,3 +48,8 @@
 **Goal:** Password is in `data.txt` and is the only line that occurs only once.
 - **Action:** Used `sort data.txt | uniq -u` to sort the lines and filter out duplicates, leaving only the unique line.
 - **Password:** `EjmOSvuAu7sGAHqHVcBDPirRe9T03kxl`
+
+## Level 9 → Level 10
+**Goal:** Password is stored in `data.txt`, preceded by several `=` characters.
+- **Action:** Used `strings data.txt | grep "="` to find the lines containing `=`. The password was embedded in one of these lines.
+- **Password:** `B0s2khmbT9u0geKuOoVGW3JZKhndE3BG`
